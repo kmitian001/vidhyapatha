@@ -1,0 +1,26 @@
+institute,branch,category,quota,opening_rank,closing_rank,tuition_fee,location,year
+Indian Institute of Technology Hyderabad,CSE,OPEN,All India,431,656,220000,Telangana,2024
+Indian Institute of Technology Hyderabad,CSE,OBC-NCL,All India,150,230,220000,Telangana,2024
+Indian Institute of Technology Hyderabad,CSE,SC,All India,80,110,0,Telangana,2024
+Indian Institute of Technology Hyderabad,ECE,OPEN,All India,900,1200,220000,Telangana,2024
+Indian Institute of Technology Hyderabad,ECE,OBC-NCL,All India,400,550,220000,Telangana,2024
+National Institute of Technology Warangal,CSE,OPEN,Other State,1000,2186,125000,Telangana,2024
+National Institute of Technology Warangal,CSE,OPEN,Home State,2000,3500,125000,Telangana,2024
+National Institute of Technology Warangal,CSE,OBC-NCL,Other State,500,800,125000,Telangana,2024
+National Institute of Technology Warangal,CSE,SC,Other State,200,400,0,Telangana,2024
+National Institute of Technology Warangal,ECE,OPEN,Other State,2500,4500,125000,Telangana,2024
+National Institute of Technology Warangal,ECE,OBC-NCL,Other State,1000,1500,125000,Telangana,2024
+National Institute of Technology Trichy,CSE,OPEN,Other State,600,1224,125000,Tamil Nadu,2024
+National Institute of Technology Trichy,CSE,OPEN,Home State,1000,2500,125000,Tamil Nadu,2024
+National Institute of Technology Trichy,CSE,OBC-NCL,Other State,200,450,125000,Tamil Nadu,2024
+National Institute of Technology Trichy,CSE,SC,Other State,100,150,0,Tamil Nadu,2024
+National Institute of Technology Trichy,ECE,OPEN,Other State,1500,3000,125000,Tamil Nadu,2024
+National Institute of Technology Trichy,ECE,OBC-NCL,Other State,600,900,125000,Tamil Nadu,2024
+Indian Institute of Information Technology Hyderabad,CSE,OPEN,All India,500,950,300000,Telangana,2024
+Indian Institute of Information Technology Hyderabad,ECE,OPEN,All India,1200,1800,300000,Telangana,2024
+Indian Institute of Information Technology Allahabad,CSE,OPEN,All India,2000,4000,175000,Uttar Pradesh,2024
+Indian Institute of Information Technology Allahabad,CSE,OBC-NCL,All India,800,1500,175000,Uttar Pradesh,2024
+Indian Institute of Information Technology Allahabad,ECE,OPEN,All India,4500,6500,175000,Uttar Pradesh,2024
+National Institute of Technology Surathkal,CSE,OPEN,Other State,800,1500,125000,Karnataka,2024
+National Institute of Technology Surathkal,CSE,OPEN,Home State,1500,2800,125000,Karnataka,2024
+National Institute of Technology Surathkal,CSE,OBC-NCL,Other State,300,550,125000,Karnataka,2024
