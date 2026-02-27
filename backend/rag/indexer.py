@@ -6,25 +6,33 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 def build_index():
     print("Loading data...")
-    # Load the cleaned JoSAA dataset
-    df = pd.read_csv("../../josaa_cleaned_for_embedding.csv")
+    # Resolve all paths absolutely from this file's location
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # IMPORTANT: FAISS C++ library cannot handle Unicode paths on Windows.
+    # The project path contains 'ā' so we save the index to a plain ASCII path.
+    csv_path = os.path.normpath(os.path.join(script_dir, "..", "..", "josaa_cleaned_for_embedding.csv"))
+    save_path = r"C:\faiss_index"
+    
+    print(f"  CSV path: {csv_path}")
+    print(f"  Save path: {save_path}")
+    
+    df = pd.read_csv(csv_path)
     
     # We load the dataframe into langchain documents
-    # The 'page_content_column' is the pre-formatted explicit text created for embeddings
     loader = DataFrameLoader(df, page_content_column="embedding_text")
     documents = loader.load()
+    print(f"  Loaded {len(documents)} documents.")
     
     print("Initializing embeddings model...")
-    # Free local open-source embeddings (all-MiniLM-L6-v2 is fast and lightweight)
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     print("Building FAISS index...")
     vectorstore = FAISS.from_documents(documents, embeddings)
     
-    # Save the index to disk
-    vectorstore.save_local("faiss_index")
-    print("Index saved successfully to 'faiss_index' directory.")
+    # Ensure save directory exists before writing
+    os.makedirs(save_path, exist_ok=True)
+    vectorstore.save_local(save_path)
+    print(f"Index saved successfully to '{save_path}'.")
 
 if __name__ == "__main__":
-    os.makedirs("faiss_index", exist_ok=True)
     build_index()
